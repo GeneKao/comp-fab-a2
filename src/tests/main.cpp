@@ -3,6 +3,8 @@
 //using Eigen::Vector2f;
 //using Eigen::Vector2d;
 //using Eigen::VectorXd;
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 #include <RigidBody.h>
 #include <Joint.h>
@@ -124,7 +126,9 @@ TestResult testFixedAngleJoint() {
 
 	RigidBody rb(0, 1.0);
 
-	FixedAngleJoint joint({0, M_PI/3});
+	FixedAngleJoint joint;
+	joint.rbIdx = 0;
+	joint.angle = M_PI / 3;
 
 	MatrixXd dC_dx = joint.computeJacobian(x, rb);
 

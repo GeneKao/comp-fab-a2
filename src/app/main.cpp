@@ -1,6 +1,9 @@
 ﻿#ifdef WIN32
 #define NOMINMAX
 #endif
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 #include <app.h>
 
 #include <NewtonFunctionMinimizer.h>
@@ -10,7 +13,6 @@
 #include "mechanisms.h"
 
 #include <iostream>
-#include <cmath>
 #include <chrono>
 #include <algorithm>
 

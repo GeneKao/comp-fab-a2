@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RigidBody.h"
+#include <array>
 
 using Eigen::Vector2d;
 using Eigen::VectorXd;
